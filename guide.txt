@@ -1,0 +1,4 @@
+#Steps to run Java program
+
+1. >javac <filename>.java
+2. >java <classname>
