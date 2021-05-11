@@ -2,3 +2,12 @@
 
 1. >javac <filename>.java
 2. >java <classname>
+
+
+#Steps to run packages in java
+
+1. >javac -d <direactoryname> <filename>.java
+2. >java <packagename>.<classname>
+
+eg >javac -d . SimplePackage.java
+   >java mypack.SimplePackage
