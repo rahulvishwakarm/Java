@@ -1,6 +1,6 @@
 class SingleLinkedList
 {
-    Node head;  // head of list
+    Node head;
     static class Node {
         int data;
         Node next;
@@ -19,6 +19,6 @@ class SingleLinkedList
 
         SLL.head.next = second;
         second.next = third;
-
+        
     }
 }
