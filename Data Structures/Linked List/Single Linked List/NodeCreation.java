@@ -4,7 +4,7 @@ class NodeCreation
     static class Node {
         int data;
         Node next;
-        Node(int d) // Constructor 
+        Node(int d) // Constructor
         {
             data =  d;
             next = null;
