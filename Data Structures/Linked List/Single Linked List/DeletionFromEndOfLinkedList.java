@@ -35,11 +35,12 @@ class DeletionFromEndOfLinkedList
 
         // Deleting
         Node point = DBL.head;
+        Node pnt = DBL.head;
         while(point.next!=null){
-            ptr1 = point;
+            pnt = point;
             point = point.next;
         }
-        ptr1.next = null;
+        pnt.next = null;
 
         // Traversing
         Node ptr2 = DBL.head;
