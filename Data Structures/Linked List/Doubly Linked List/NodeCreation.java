@@ -15,6 +15,7 @@ class NodeCreation
     }
     public static void main(String[] args)
     {
-        NodeCreation NC = new NodeCreation(11);
+        NodeCreation NC = new NodeCreation();
+        NC.head = new Node(11);
     }
 }
