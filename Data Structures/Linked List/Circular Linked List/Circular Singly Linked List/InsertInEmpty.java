@@ -1,4 +1,4 @@
-class Creation
+class InsertInEmpty
 {
     static class Node
     {
