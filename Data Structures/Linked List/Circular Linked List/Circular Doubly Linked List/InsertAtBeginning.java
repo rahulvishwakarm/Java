@@ -34,9 +34,9 @@ class InsertAtBeginning
         }
         Node lnk = new Node(data);
         lnk.next = head;
-        lnk.prev = head.next;
+        lnk.prev = head;
         head.next = lnk;
-        head.prev = lnk.next;
+        head.prev = lnk;
         return head;
     }
 
