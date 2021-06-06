@@ -28,8 +28,13 @@ class InsertAtEnd
             return addToNull(head,d);
         }
         Node lnk = new Node(d);
-        lnk.next = head.next;
-        head.next = lnk;
+        Node ptr = head;
+        do{
+            ptr = ptr.next;
+        }
+        while(head.next!=null);
+        ptr.next = lnk;
+        lnk.next = head;
         return head;
     };
 
@@ -40,8 +45,13 @@ class InsertAtEnd
             System.out.print("Linked List is empty");
         }
         Node lnk  = new Node(d);
-        lnk.next = head.next;
-        head.next = lnk;
+        Node ptr = head;
+        while(ptr.next!=head)
+        {
+            ptr = ptr.next;
+        }
+        ptr.next = lnk;
+        lnk.next = head;
         head = lnk;
         return head;
     };
