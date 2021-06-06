@@ -49,7 +49,7 @@ class DeleteFromBeginning
         {
             Node keeptrack = head;
             head = head.next;
-            keeptrack=null;
+            head.prev = null;
         }
     };  
 
