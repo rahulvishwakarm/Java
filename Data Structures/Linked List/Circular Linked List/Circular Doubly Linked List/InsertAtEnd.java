@@ -22,6 +22,7 @@ class InsertAtEnd
         Node lnk = new Node(data);
         head = lnk;
         lnk.next = head;
+        lnk.prev = lnk.next;
         return head;
     }
 
@@ -33,10 +34,16 @@ class InsertAtEnd
             return addToEmpty(head,data);
         }
         Node lnk = new Node(data);
-        lnk.next = head;
-        lnk.prev = head;
-        head.next = lnk;
+        Node ptr = head;
+        while(ptr.next!=head)
+        {
+            ptr = ptr.next;
+        }
+        ptr.next = lnk;
+        lnk.prev = ptr;
         head.prev = lnk;
+        lnk.next = head;
+        head = lnk;
         return head;
     }
 

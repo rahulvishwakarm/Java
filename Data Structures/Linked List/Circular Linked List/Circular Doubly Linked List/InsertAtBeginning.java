@@ -22,6 +22,7 @@ class InsertAtBeginning
         Node lnk = new Node(data);
         head = lnk;
         lnk.next = head;
+        lnk.prev = lnk.next;
         return head;
     }
 
@@ -30,13 +31,19 @@ class InsertAtBeginning
         if(head==null)
         {
             System.out.print("Linked List is Empty!!");
-            return addToEmpty(head,data);
+            return head;
         }
         Node lnk = new Node(data);
-        lnk.next = head;
-        lnk.prev = head;
-        head.next = lnk;
+        Node ptr = head;
+        while(ptr.next!=head)
+        {
+            ptr = ptr.next;
+        }
+        ptr.next = lnk;
+        lnk.prev = ptr;
         head.prev = lnk;
+        lnk.next = head;
+        head = lnk;
         return head;
     }
 
