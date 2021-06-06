@@ -26,7 +26,6 @@ class NodeInsertInEmptyList
             head = link;
         }
         last = link;
-        link.prev = head;
 
         // Traversing the List
         Node ptr = head;
