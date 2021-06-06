@@ -41,16 +41,16 @@ class DeleteFromEnd
 
     static void DeleteFromEnd()
     {
+
         Node deleteptr = head;
+        Node temp;
         while(deleteptr.next!=null)
         {
             deleteptr = deleteptr.next;
-            if(deleteptr.next.next!=null)
-            {
-                deleteptr.next = null;
-            }
         }
-    };  
+        temp = deleteptr.prev;
+        temp.next = null;
+    };
 
     static void printList()
     {
