@@ -47,14 +47,15 @@ class InsertAtSpecificPosition
         Scanner sc = new Scanner(System.in);
         System.out.print("After which node do you want to insert new node: ");
         int nodePos = sc.nextInt();
-        while (keeptrack.data!=nodePos)
+        for(int i=1;i<nodePos;i++)
         {
             keeptrack=keeptrack.next;
         }
+        instAtEnd.prev = keeptrack;
         instAtEnd.next = keeptrack.next;
+        keeptrack.next.prev = instAtEnd;
         keeptrack.next = instAtEnd;
-        instAtEnd.prev = keeptrack.next;
-    };  
+    };
 
     static void printList()
     {
