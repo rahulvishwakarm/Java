@@ -28,8 +28,12 @@ class InsertAtBeginning
             return addToNull(head,d);
         }
         Node lnk = new Node(d);
-        lnk.next = head.next;
-        head.next = lnk;
+        Node ptr = head;
+        do{
+            ptr = ptr.next;
+        }while(head.next!=head);
+        ptr.next = lnk;
+        lnk.next = head;
         return head;
     };
     
