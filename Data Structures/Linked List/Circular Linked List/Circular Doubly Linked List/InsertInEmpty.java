@@ -22,6 +22,7 @@ class InsertInEmpty
         Node lnk = new Node(data);
         head = lnk;
         lnk.next = head;
+        lnk.prev = lnk.next;
         return head;
     }
 
