@@ -1,6 +1,6 @@
 import java.util.*;
 
-class StackUsingArray
+class StackUsingArrayNormalApproach
 {
     public static int MAX = 5;
     public static int arr[] = new int[MAX];
